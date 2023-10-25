@@ -1,15 +1,37 @@
-# Implement a recursive function to calculate the factorial of a given number
-def recur_factorial(n):  
-   if n == 1:  
-       return n  
-   else:  
-       return n*recur_factorial(n-1)  
-# take input from the user  
-num = int(input("Enter a number: "))  
-# check is the number is negative  
-if num < 0:  
-   print("Sorry, factorial does not exist for negative numbers")  
-elif num == 0:  
-   print("The factorial of 0 is 1")  
-else:  
-   print("The factorial of",num,"is",recur_factorial(num))
+#2.2 Implement a class called Player that represents a cricket player. The Player class should have a method called play() which prints "The player is playing cricket. Derive two classes, Batsman and Bowler, from the Player class. Override the play() method in each derived class to print "The batsman is batting" and "The bowler is bowling", respectively. Write a program to create objects of both the Batsman and Bowler classes and call the play() method for each object
+
+# Define the Player class
+
+class Player:
+
+    def play(self):
+
+        print("The player is playing cricket.")
+
+# Define the Batsman class, derived from Player
+
+class Batsman(Player):
+
+    def play(self):
+
+        print("The batsman is batting.")
+
+# Define the Bowler class, derived from Player
+
+class Bowler(Player):
+
+    def play(self):
+
+        print("The bowler is bowling.")
+
+# Create objects of Batsman and Bowler classes
+
+batsman = Batsman()
+
+bowler = Bowler()
+
+# Call the play() method for each object
+
+batsman.play()
+
+bowler.play()
